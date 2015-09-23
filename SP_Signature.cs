@@ -65,7 +65,8 @@ namespace SimplePay
 		/**
 		 * Статический метод для генерации MD5 хеша на основе строки в кодировке UTF-8
 		 */ 
-		static string md5(string phrase){
+		static string md5(string phrase)
+		{
 			MD5 md5 = new MD5CryptoServiceProvider();
 			byte[] crypto = md5.ComputeHash(Encoding.UTF8.GetBytes(phrase));
 

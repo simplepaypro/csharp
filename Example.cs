@@ -15,7 +15,7 @@ namespace SimplePay
 			my["sp_user_contact_email"] = "info@simplepay.pro";
 
 			// 2. Инициализируем инстанс класса SP - быстрый путь
-			SP_Signature sign_machine = new SP_Signature ("result", "mysecret");
+			SP_Signature sign_machine = new SP_Signature ("payment", "mysecret");
 
 			// Получаем строку конкатенеции и подпись
 			Console.WriteLine("Concatation string: "+sign_machine.make_concat_string(my));

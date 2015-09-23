@@ -34,8 +34,9 @@ namespace SimplePay
 		static string sha256(string phrase)
 		{
 			SHA256Managed crypt = new SHA256Managed();
-			StringBuilder hash = new System.Text.StringBuilder();
 			byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(phrase));
+			
+			StringBuilder hash = new System.Text.StringBuilder();
 			foreach (byte theByte in crypto)
 			{
 				hash.Append(theByte.ToString("x2"));
@@ -50,8 +51,9 @@ namespace SimplePay
 		static string sha512(string phrase)
 		{
 			SHA512Managed crypt = new SHA512Managed();
-			StringBuilder hash = new System.Text.StringBuilder();
 			byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(phrase));
+			
+			StringBuilder hash = new System.Text.StringBuilder();
 			foreach (byte theByte in crypto)
 			{
 				hash.Append(theByte.ToString("x2"));
@@ -65,8 +67,9 @@ namespace SimplePay
 		 */ 
 		static string md5(string phrase){
 			MD5 md5 = new MD5CryptoServiceProvider();
-			StringBuilder hash = new System.Text.StringBuilder();
 			byte[] crypto = md5.ComputeHash(Encoding.UTF8.GetBytes(phrase));
+
+			StringBuilder hash = new System.Text.StringBuilder();
 			foreach (byte theByte in crypto)
 			{
 				hash.Append(theByte.ToString("x2"));
